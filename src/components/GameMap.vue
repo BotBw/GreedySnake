@@ -25,7 +25,6 @@ export default {
     }
   }
 }
-
 </script>
 
 
@@ -39,8 +38,6 @@ div {
 }
 
 canvas {
-  height: 88%;
-  width: 88%;
-  background-color: black;
+  background-color: rgb(151, 255, 140);
 }
 </style>

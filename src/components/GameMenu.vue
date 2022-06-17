@@ -25,6 +25,7 @@ export default {
   background-color: rgb(30, 120, 37);
   display: flex;
   justify-content: space-around;
+  user-select: none;
 }
 .cur-score { 
   display: flex;
