@@ -11,11 +11,16 @@ export class GameObject {
 
   }
 
+
   update() {
+  }
+
+  __destroy() {
 
   }
 
   destroy() {
+    this.__destroy();
     for (let i in GLOBAL_OBJECTS) {
       if(GLOBAL_OBJECTS[i] === this) {
         GLOBAL_OBJECTS.splice(i, 1);
@@ -23,8 +28,7 @@ export class GameObject {
       }
     }
   }
-};
-
+}
 
 let last_timestamp;
 
@@ -40,6 +44,6 @@ const draw_frame = timestamp => {
   }
   last_timestamp = timestamp
   requestAnimationFrame(draw_frame);
-};
+}
 
 requestAnimationFrame(draw_frame);

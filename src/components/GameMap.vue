@@ -1,12 +1,29 @@
 <template>
-  <div>
-    <canvas></canvas>
+  <div ref="div">
+    <canvas ref="canvas"></canvas>
   </div>
 </template>
 
 <script>
+import { ref, onMounted } from 'vue';
+import { MapRefresher } from '@/assets/scripts/MapRefresher';
+
 export default {
   name: "GameMap",
+
+  setup: () => {
+    let div = ref(null);
+    let canvas = ref(null);
+
+    onMounted(() => {
+      new MapRefresher(canvas.value.getContext('2d'), div.value);
+    });
+
+    return {
+      div,
+      canvas
+    }
+  }
 }
 
 </script>
