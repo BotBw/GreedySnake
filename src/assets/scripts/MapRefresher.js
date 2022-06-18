@@ -13,7 +13,7 @@ export class MapRefresher extends GameObject {
   }
 
   start() {
-
+   
   }
 
   update_size() {
